@@ -3,7 +3,7 @@ clear all
 %% Data Processing 
 data = csvread('fashion-mnist_train.csv');
 data_1 = csvread('fashion-mnist_test.csv');
-
+% FashionMNIST Data is available online
 %60,000 Training data available
 Train_x = zeros(length(data),784); % Creating labels for Binary classification training
 for i = 1: length(data)

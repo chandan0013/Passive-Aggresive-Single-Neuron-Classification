@@ -22,14 +22,14 @@ end
 Train_x = normalize(Train_x);
 Test_x = normalize(Test_x);
 
-%60,000 Training labels available
+%%60,000 Training labels available
 Train_y = zeros(1,length(data)); % Creating labels for Binary classification training
 %only double class operations
 for i = 1: length(data)
         Train_y(1,i) = int8(data(i,1))+1;   
 end
 
-%10,000 test labels available
+%%10,000 test labels available
 Test_y = zeros(1,length(data_1)); % Creating labels for Binary classification test
 for i = 1: length(data_1)
         Test_y(1,i) = int8(data_1(i,1))+1;  
@@ -45,7 +45,7 @@ end
 
 k = 10; d = 784; % #labels #features
 w = zeros(k,d);  %intial vector for 784 features
-% Training
+%% Training
 
 T = 50;    %# of iterations
 error_1 = zeros(1,T);   % Error count for each T Runs
@@ -70,7 +70,7 @@ end
 
 
 w = zeros(k,d);  %intial vector for 784 features
-% Training
+%% Training
 
 T = 50;    %# of iterations
 error_2 = zeros(1,T);   % Error count for each T Runs
@@ -130,7 +130,7 @@ for i = 1:T
     accuracy_training_1(1,i) = 1 - count/length(Train_y);
 end
 
-% Multi-Class Classifications of Labels using PA
+%% Multi-Class Classifications of Labels using PA
 
 w = zeros(k,d);  %intial vector for 784 features
 error_training_2 = zeros(1,T);   % Error count for each T Runs
@@ -204,7 +204,7 @@ for i = 1:T
     accuracy_test_1(1,i) = 1 - count/length(Test_y);
 end
 
-% Multi-Class Classifications of Labels using PA
+%% Multi-Class Classifications of Labels using PA
 
 w = zeros(k,d);  %intial vector for 784 features
 error_test_2 = zeros(1,T);   % Error count for each T Runs
@@ -343,7 +343,7 @@ else
     e = [35000 40000 45000 50000 55000 60000 5000 10000 15000 20000 25000 30000];
 end
 
-% Training
+%% Training
 T = 20;    %# of iterations
 error_1 = zeros(1,12);   % Error count for each T Runs
 accuracy_1 = zeros(1,12);
